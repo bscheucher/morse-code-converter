@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Converter</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="main-block">
+
+    <form action="/" method="POST">
+        <h1>Morse Code Converter</h1>
+
+        <p>Message to encode:</p>
+        <div>
+            <textarea name="message" rows="4" placeholder="Enter your message here..." required></textarea>
+        </div>
+        <p>Morse Text</p>
+        <div id="morse-text-wrapper">
+            <label id="morse-text">{{ morse_code or "Morse code will appear here." }}</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
